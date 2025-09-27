@@ -113,7 +113,7 @@ p {
   /* HINT: Use background-color, border-radius, box-shadow, transition */
   background-color: var(--card-bg);
   transition: var(--transition);
-  box-shadow: var(--card-shadow);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px ;
 }
 
@@ -121,7 +121,7 @@ p {
   /* TODO: Add hover styles for card */
   /* HINT: Use transform and box-shadow */
   transform: scale(1.4);
-  box-shadow: var(--card-shadow);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-img {
@@ -384,7 +384,7 @@ input:checked + .slider-round:before {
   background-color: var(--light-gray);
   border-radius: 10px;
   overflow:visible;
-  box-shadow: 5px 5px var(--secondary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .list-item {
@@ -636,7 +636,7 @@ input:checked + .slider-round:before {
   /* TODO: Add navigation styles */
   /* HINT: Use display, background-color, border-radius, overflow, and margin-bottom */
   display: flex;
-  background-color: var(--success);
+  background-color: var(--light-gray);
   border-radius: 5%;
   overflow: scroll;
   margin-bottom: 5%;
@@ -647,7 +647,7 @@ input:checked + .slider-round:before {
   /* HINT: Use padding, color, text-decoration, transition */
   padding: 1px;
   color: var(--text-color);
-  text-decoration:line-through;
+  text-decoration:underline;
   transition: var(--transition);
 }
 
@@ -660,7 +660,7 @@ input:checked + .slider-round:before {
 .nav-item.active {
   /* TODO: Add styles for active nav item */
   /* HINT: Use background-color and font-weight */
-  background-color: var(--primary);
+  background-color: var(--gray);
   font-weight: bolder;
 }
 
@@ -735,7 +735,7 @@ input:checked + .slider-round:before {
   /* HINT: Use background-color, color, and border-color */
   background-color: var(--primary);
   color: var(--secondary);
-  border-color: red;
+  border-color: var(--success);
 }
 
 /* Breadcrumb Styles */
@@ -789,7 +789,7 @@ input:checked + .slider-round:before {
   /* HINT: Use display, position, top/left, width, height, background-color, z-index, 
   justify-content, and align-items */
      display: flex;
-     position: absolute;
+     position: fixed;
      top: 50%;
      left: 50%;
      width: 400px;
@@ -807,7 +807,7 @@ input:checked + .slider-round:before {
   /* HINT: Use background-color, border-radius, width, max-width, padding, and box-shadow */
      background-color: var(--primary);
      border-radius: 10px;
-     width: 80%;
+     width: 400px;
      max-width: 500px;
      padding: 10px;
      box-shadow: 0px 4px 12px  var(--dark);
@@ -1024,7 +1024,7 @@ input:checked + .slider-round:before {
      left: 20px;
      background-color: var(--light-gray);
      border-radius: 10px;
-     box-shadow: var(--border-color);
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
      min-width: 200px;
      z-index: 1;
      display:none;
@@ -1069,7 +1069,7 @@ input:checked + .slider-round:before {
      padding: 20px;
      background-color: var(--warning);
      border-radius: 20%;
-     box-shadow: #4cc9f0;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
      margin-bottom: auto;
      display: flex;
      align-items: center;
@@ -1110,173 +1110,344 @@ input:checked + .slider-round:before {
 .code-editor {
   /* TODO: Add code editor styles */
   /* HINT: Use background-color, border-radius, padding, margin, font-family, color, and overflow-x */
+     background-color: var(--light-gray);
+     border-radius: 25px;
+     padding: 10px;
+     margin: 15px;
+     font-family: cursive;
+     color: var(--secondary);
+     overflow-x: auto;
+
 }
 
 .code-comment {
   /* TODO: Add code comment styles */
   /* HINT: Use color */
+     color: var(--primary);
 }
 
 .code-selector {
   /* TODO: Add code selector styles */
   /* HINT: Use color */
+     color: var(--success);
 }
 
 .code-property {
   /* TODO: Add code property styles */
   /* HINT: Use color */
+     color: var(--dark);
 }
 
 .code-value {
   /* TODO: Add code value styles */
   /* HINT: Use color */
+     color: var(--warning);
 }
 
 /* Theme Selector */
 .theme-selector {
   /* TODO: Add theme selector styles */
   /* HINT: Use position, top, right, and z-index */
+     position: absolute;
+     top: 20%;
+     right: 20%;
+     z-index: 2;
 }
 
 .theme-btn {
   /* TODO: Add theme button styles */
   /* HINT: Use padding, background-color, color, border, border-radius, and cursor */
+     padding: 20px;
+     background-color: var(--dark);
+     color: var(--gray);
+     border: 5px dotted var(--light-gray);
+     border-radius: 5px;
+     cursor: all-scroll;
 }
 
 /* Animation Classes */
 .fade-in {
   /* TODO: Add fade-in animation */
   /* HINT: Use animation property */
+  animation: fadeIn 1s ease-in forwards;
 }
 
 .slide-in {
   /* TODO: Add slide-in animation */
   /* HINT: Use animation property */
+  animation: slideIn 1s ease-in forwards;
 }
 
 .bounce {
   /* TODO: Add bounce animation */
   /* HINT: Use animation property */
+  animation: bounce 1s ease-in-out infinite;
 }
 
 @keyframes fadeIn {
   /* TODO: Add fadeIn keyframes */
   /* HINT: Define from and to states with opacity */
+     
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+
 }
 
 @keyframes slideIn {
   /* TODO: Add slideIn keyframes */
   /* HINT: Define from and to states with transform and opacity */
+     from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+  to {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 }
 
 @keyframes bounce {
   /* TODO: Add bounce keyframes */
   /* HINT: Define keyframe percentages with transform */
+     
+     0%, 100% {
+  transform: translateY(0);
+}
+   50% {
+  transform: translateY(-20px);
+}
+
 }
 
 /* Panel Header with close button */
 .panel-header {
   /* TODO: Add panel header styles */
   /* HINT: Use display, justify-content, align-items, margin-bottom, border-bottom, and padding-bottom */
+     display: flex;
+     justify-content:flex-start;
+     align-items: center;
+     margin-bottom: 20px;
+     border-bottom: 5px solid var(--light-gray);
+     padding-bottom: 30px;
+
+         
 }
 
 .panel-close {
   /* TODO: Add panel close button styles */
   /* HINT: Use background, border, font-size, cursor, color, and transition */
+     
+    background: var(--light-gray);
+    border: 5px solid var(--dark);
+    font-size:xx-large;
+    cursor: all-scroll;
+    color: var(--success);
+    transition: var(--transition);
+    padding: 6px 12px;
+    border-radius: 50px;
+  
+     
 }
 
 .panel-close:hover {
   /* TODO: Add hover styles for panel close button */
   /* HINT: Use color and transform */
+     color: var(--primary);
+     transform: scale(1.1);
+
 }
 
 /* Pull tab that appears on the left edge when panel is closed */
 .panel-pull-tab {
   /* TODO: Add panel pull tab styles */
-  /* HINT: Use position, top, left, transform, background-color, color, padding, border-radius, cursor, box-shadow, z-index, display, align-items, justify-content, and transition */
+  /* HINT: Use position, top, left, transform, background-color, color, padding, border-radius, cursor,
+   box-shadow, z-index, display, align-items, justify-content, and transition */
+     
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: var(--dark);
+  color: var(--light-gray);
+  padding: 10px 15px;
+  border-radius: 2px 8px 8px 2px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+
+    
 }
 
 .panel-pull-tab:hover {
   /* TODO: Add hover styles for panel pull tab */
   /* HINT: Use padding-right and background-color */
+     padding-right: 20px;
+     background-color: var(--primary);
 }
 
 /* Customization Panel */
 .customization-panel {
   /* TODO: Add customization panel styles */
-  /* HINT: Use position, top, left, width, height, background-color, box-shadow, padding, overflow-y, transform, transition, and z-index */
+  /* HINT: Use position, top, left, width, height, background-color, box-shadow, padding, overflow-y,
+   transform, transition, and z-index */
+     position: fixed;
+     top: 0;
+     left: -300px; 
+     width: 300px;
+     height: 100vh;
+     background-color: var(--border-color);
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     overflow-y: auto;
+     transform: translateX(0);
+     transition: transform 0.3s ease;
+     z-index: 100;
+
 }
 
 .customization-panel.open {
   /* TODO: Add styles for open customization panel */
   /* HINT: Use transform */
+  transform: translate(200px);
 }
 
 .panel-toggle {
   /* TODO: Add panel toggle styles */
-  /* HINT: Use position, top, right, z-index, padding, background-color, color, border, border-radius, and cursor */
+  /* HINT: Use position, top, right, z-index, padding, background-color, color, border, border-radius,
+   and cursor */
+      
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   z-index: 10;
+   padding: 10px 15px;
+   background-color: var(--dark);
+   color: var(--light-gray);
+   border: 3px solid var(--gray);
+   border-radius: 5px;
+   cursor: pointer;
+
 }
 
 .color-option {
   /* TODO: Add color option styles */
   /* HINT: Use width, height, border-radius, display, margin, cursor, and border */
+     
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   display: inline-block;
+   margin: 5px;
+   cursor: pointer;
+   border: 5px solid transparent;
+
 }
 
 .color-option.active {
   /* TODO: Add active color option styles */
   /* HINT: Use border-color */
+     border-color: var(--secondary);
 }
 
 /* Interactive Widgets */
 .interactive-widgets {
   /* TODO: Add interactive widgets container styles */
   /* HINT: Use display, grid-template-columns, gap, and margin-bottom */
+     display: flex;
+     grid-template-columns: repeat(auto-fill, minmax(50px, 2fr));
+     gap: 15px;
+     margin-bottom: 30px;
 }
 
 .widget {
   /* TODO: Add widget styles */
   /* HINT: Use background-color, border-radius, box-shadow, padding, display, and transition */
+     
+   background-color: var(--light-gray);
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   padding: 15px;
+   display: flex;
+   align-items: center;
+   transition: var(--transition)
+
 }
 
 .widget:hover {
   /* TODO: Add hover styles for widgets */
   /* HINT: Use transform and box-shadow */
+     transform: scale(1.05);
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
 }
 
 .widget i {
   /* TODO: Add widget icon styles */
   /* HINT: Use font-size, color, and margin-right */
+     font-size: 25px;
+     color: var(--primary);
+     margin-right: 10px
+
+
 }
 
 .widget-content {
   /* TODO: Add widget content styles */
   /* HINT: Use flex property */
+     flex: 1;
 }
 
 .widget h3 {
   /* TODO: Add widget heading styles */
   /* HINT: Use margin-top, margin-bottom, color, and font-size */
+     margin-top: 0;
+     margin-bottom: 5px;
+     color: var(--info);
+     font-size: medium;
+
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   /* TODO: Add responsive styles for mobile */
   /* HINT: Adjust component-grid, btn-group, nav, and tab-header */
+     
 
   .component-grid {
     /* Change grid to single column */
+     display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
   }
 
   .btn-group {
     /* Stack buttons vertically */
+       display: flex;
+       flex-direction: column;
+       gap: 8px;
   }
 
   .nav {
     /* Make nav items stack vertically */
+       display: flex;
+       flex-direction: column;
+       gap: 8px;
   }
 
   .tab-header {
     /* Make tab links stack vertically */
+       display: flex;
+       flex-direction: column;
+       gap: 8px;
   }
 }
 
