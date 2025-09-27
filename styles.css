@@ -783,6 +783,7 @@ input:checked + .slider-round:before {
   color: var(--info);
 }
 
+
 /* Modal Styles */
 .modal {
   /* TODO: Add modal styles */
