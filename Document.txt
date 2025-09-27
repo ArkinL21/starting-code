@@ -1,0 +1,16 @@
+The design decision used was using light colors for main, and dark colours for hovering.
+
+Used the colors and transitions already listed in the root, to mintain consistency, the color red was used;
+but mainly for testing and has been removed.
+
+Challenges:
+
+* Modal gave me a difficult time but have understood it, not particularly proud of my styling, manly because the 
+moment page reloads it pops up, without pressing the modal button, second struggled to align the background
+and front.
+
+*Overlapping elements - my content was overlapping but fixed this with position.
+
+*Animation n general.
+
+*When I press the customize button a windows slides in but not all the way so cannot use it properly.
